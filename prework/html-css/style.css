@@ -1,0 +1,55 @@
+body{	
+	margin:0;
+	height: auto;
+}
+header{
+	height: 210px;
+	width: 100%;
+	background-color: #c9c9c9;
+	text-align: center;
+}
+article
+{
+	background-color: #d9d9d9;
+	width: 300px;
+	margin: 0;
+	height: 300px;
+	
+	
+}
+aside{
+	background-color: #c9c9c9;
+	width: 400px;
+	text-align: center;
+	margin:0;
+	height: 150px;
+	
+}
+h1
+{
+	color:red;
+	font: Arial, Helvetica, sans-serif;
+	font-weight: bold;
+}
+table
+{
+	border: 2px solid black;
+}
+td
+{
+	font-size: .8em;
+	font:Arial, "Helvetica Neue", Helvetica, sans-serif;
+}
+footer
+{
+	background-color: #a9a9a9;
+	height:auto;
+	width: 100%;
+}
+h4
+{
+	font-weight: bold;
+	font-size: 14px;
+	color:blue;
+	text-align:center;
+}
