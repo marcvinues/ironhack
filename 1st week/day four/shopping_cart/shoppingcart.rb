@@ -35,7 +35,6 @@ class Shop
 end
 #iteration 2
 class Discount
-
 def discounts
 		puts "Enter what fruit you want!"
 		fruit = gets.chomp
