@@ -1,4 +1,3 @@
-class Login
 
 	attr_accessor :login, :password
 	
