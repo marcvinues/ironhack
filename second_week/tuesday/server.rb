@@ -41,8 +41,8 @@ get "/users/:username" do
 end
 
 get "/hours/ago/:hour" do
-  @hour = params[:hour]
-  @t = Time.now()
+  offset = params[:hour].to_i
+  @new_time = Time.now - (offset * 60 * 60)
   # @time = Time.at(t.to_i.abs).strftime "%H:%M:%S"
   @hour_now = @t.hour
   @total = @hour_now - @hour.to_i

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Create a New Post</title>
+  </head>
+  <body>
+    <label>New Post</label>
+    <br />
+    <br />
+    <form action="/test" method="post">
+      <label>Title </label><input type="text" name="title" value=""><br>
+      <br />
+      <label>Date </label><input type="date" name="date" value="<%= Time.now.strftime("%Y-%m-%d")%>"><br />
+      <br />
+      <label>Author </label><input type="text" name="author" value="">
+      <br>
+      <br />
+      <label>Category </label><input type="text" name="category" value="">
+      <br />
+      <br />
+      <textarea name="textarea" rows="10" cols="40"></textarea><br />
+      <br />
+      <br />
+      <input type="submit" value="Send">
+
+    </form>
+  </body>
+</html>

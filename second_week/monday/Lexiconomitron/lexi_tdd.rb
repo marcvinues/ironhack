@@ -12,13 +12,13 @@ describe Lexiconomitron do
    end
 end
 
-
   describe "eat_t" do
     it "removes every letter t from the input" do
       expect(@doit.eat_t_conc("great scott bolt!")).to eq("aerg !lob")
    end
 end
 
+# @pw = passoword.length >= 7
 
   describe "oompa_loompa" do
     it "returns three characters or less" do
