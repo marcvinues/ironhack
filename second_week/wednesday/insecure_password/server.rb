@@ -20,6 +20,10 @@ get '/login' do
   if user_list.any? {|single_user| single_user[:username] == user and single_user[:password] == pw}
      redirect to '/success'
    else
-     redirect '/users'
+     redirect '/'
    end
+end
+
+get '/success' do
+  erb(:success)
 end
