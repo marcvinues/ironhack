@@ -11,6 +11,5 @@ class FizzBuzz
         end
     end
 end
-
-# game = FizzBuzz.new
-# puts game.answer(2)
+ game = FizzBuzz.new
+ puts game.answer(4)
