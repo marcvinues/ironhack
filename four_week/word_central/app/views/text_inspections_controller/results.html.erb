@@ -1,0 +1,9 @@
+<h4>Original text :</h4>
+<p><%= @text %></p>
+<h4>Word count :</h4>
+<p><%= @word_count %></p>
+<h4>Estimate the reading time :</h4>
+<p><%= @wpm.round(1) %> - Minuts to read</p>
+<h4>Frequencies</h4>
+<p><%= @freq[0..9] %></p>
+<%= link_to "Home", "/" %>

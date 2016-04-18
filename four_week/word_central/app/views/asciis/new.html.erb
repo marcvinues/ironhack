@@ -1,0 +1,10 @@
+<h1>Ascii!!</h1>
+
+<form action="/asciis" method="post">
+  <label for="text_inspection_user_text">Text</label>
+  <br>
+  <textarea name="text_inspection[user_text]" id="text_inspection_user_text"></textarea>
+  <br>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+  <button type="submit">Submit Text</button>
+</form>
