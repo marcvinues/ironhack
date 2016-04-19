@@ -1,0 +1,8 @@
+<ul>
+  <% @contacts.each do |contact| %>
+  <li>
+    Id : <%= contact.id %> <br />Name :<%= contact.name %> <br />Address: <%= contact.address %> <br />Email: <%= contact.email %> <br />Phone: <%= contact.phone %>
+  </li>
+  <% end %>
+
+</ul>

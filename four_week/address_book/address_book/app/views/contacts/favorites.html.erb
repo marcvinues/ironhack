@@ -1,0 +1,11 @@
+<h1>Your favorite list</h1>
+<ul>
+<% @contacts.each do |contact| %>
+<li>
+  <%= contact.name %>
+</li>
+<% end %>
+</ul>
+
+<br>
+<%= link_to "Back Home", "/" %>

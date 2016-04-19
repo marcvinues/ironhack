@@ -1,0 +1,16 @@
+<h1>Description</h1>
+<ul>
+ <li>Name: <%= @contacts.name %></li>
+ <li>Phone: <%= @contacts.phone %></li>
+ <li>Address: <%= @contacts.address %></li>
+ <li>Email: <%= @contacts.email %></li>
+
+</ul>
+<% if @contacts.favorites == true %>
+<input type="checkbox" name="checkbox" value="" checked>Add to favorite
+  <% else %>
+<input type="checkbox" name="checkbox" value="">Add to favorite
+<% end %>
+<br>
+<br>
+<%= link_to "Back Home", "/" %>

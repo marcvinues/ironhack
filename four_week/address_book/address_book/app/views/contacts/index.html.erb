@@ -1,0 +1,11 @@
+<h1>Index</h1>
+<% @contacts.each do |contact| %>
+<li>
+  <a href="/description/<%= contact.id %>"><%= contact.name %></a>
+</li>
+<% end %>
+<br>
+<%= link_to "Link to Contact Form", "/contacts/new" %>
+<br>
+<br>
+<%= link_to "Favorite friends?", "/favorites" %>
