@@ -1,0 +1,9 @@
+<h1>Index of movies</h1>
+
+<ul>
+  <% @my_movies.each do |movie| %>
+  <li>
+    Id : <%= movie.id %> - <%= movie.title %> :<%= movie.synopsis %> - <%= movie.year %></li>
+  <% end %>
+</ul>
+<%= link_to "Search", '/movie/search' %>

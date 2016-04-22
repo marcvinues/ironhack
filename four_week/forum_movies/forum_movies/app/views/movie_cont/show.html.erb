@@ -1,0 +1,8 @@
+<h1>show</h1>
+<% if @my_movies %>
+<p><%= @my_movies.title %></p>
+<p><%= @my_movies.year %></p>
+<p><%= @my_movies.synopsis %></p>
+<% else %>
+<p><%= @p %></p>
+<% end %>
