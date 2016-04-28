@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jquery-1.12.3.min.js"></script>
+  <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" title="no title" charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <title>JS Spotify</title>
+    <style>
+      img{
+        width: 200px;
+        height: 200px;
+      }
+      .cont{
+        margin:auto 0;
+        margin-top:100px;
+        width: 80%;
+        text-align: center;
+        position:absolute;
+        left:10%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header">
+    <a class="navbar-brand" href="#">Spotify</a>
+      </div>
+      <div class="navbar-collapse collapse" id="searchbar">
+       <form class="navbar-form">
+          <div class="form-group" style="display:inline;">
+            <div class="input-group" style="display:table;">
+              <span class="input-group-addon" style="width:1%;"><span class="glyphicon glyphicon-search"><input type="submit" value="Submit" hidden></span></span>
+              <input class="form-control" name="search" id="artist" placeholder="Search Here" autocomplete="off" autofocus="autofocus" type="text">
+            </div>
+          </div>
+        </form>
+      </div><!--/.nav-collapse -->
+    </div>
+  </div>
+
+
+    <div class="row">
+    <div class="cont"></div>
+
+  </div>
+  <script src="app.js" charset="utf-8"></script>
+  </body>
+</html>
