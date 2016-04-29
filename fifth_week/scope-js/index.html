@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="jquery-1.12.3.min.js"></script>
+
+    <meta charset="utf-8">
+    <title>JS Exercices</title>
+  </head>
+  <body>
+  <div class="container">
+    <!-- <input type="button" name="name" value="B">
+    <input type="button" name="name" value="B">
+    <input type="button" name="name" value="B">
+    <input type="button" name="name" value="B">
+    <input type="button" name="name" value="B">
+    <input type="button" name="name" value="B">
+    <input type="button" name="name" value="B">
+    <input type="button" name="name" value="B">
+    <input type="button" name="name" value="B">
+    <input type="button" name="name" value="B"> -->
+  </div>
+  <script>
+  $(function(){
+    var numButtons = 10;
+    for (var i = 0; i < numButtons; i++) {
+      var button = $('<button>').text('Click me!');
+      $('.container').append(button);
+    }
+
+    function creator(index){
+      return function(){
+        console.log('Element Clicked:' + index);
+      }
+    }
+
+    for (var j = 0; j < numButtons; j++) {
+      var buttonElement = $('button')[j];
+      $(buttonElement).on('click', creator(j));
+    }
+
+
+  })
+
+
+
+
+
+    $('input').on('click',function(){
+      var n = $('input');
+      for (var i = 0; i < n.length; i++) {
+        console.log(i);
+      }
+    });
+
+
+
+
+
+  </script>
+  </body>
+</html>

@@ -1,40 +1,10 @@
-// $(document).ready(function(){
-//
-// var url = 'https://api.spotify.com/v1/search?type=artist&query=';
-//
-//   $('form').on('submit',function(e){
-//     e.preventDefault();
-//     var value = $('#artist').val();
-//     var fullUrl = url+value;
-//     // debugger
-//     fetchArtist(fullUrl);
-//   });
-//
-//
-// function fetchArtist(fullUrl){
-//   $.ajax({
-//     url: fullUrl,
-//     method: 'GET',
-//     success:function(artists){
-//       //  debugger
-//       $('.container').empty();
-//       $('.img').empty();
-//         var text = 'Artist :'+ artists.artists.items[0].name;
-//         var element = $('<p>').text(text);
-//         var imageUrl = artists.artists.items[0].images[0].url;
-//         var imgTag = $('<img>').attr('src',imageUrl);
-//         $('.container').append(element);
-//         $('.img').append(imgTag);
-//       //});
-//      }
-//   });
-//  }
-// });
-
 $(function(){
   var ArtistManager = function(){
     this.url = 'https://api.spotify.com/v1/search?type=artist&query=';
     this.artists = [];
+    this.urlAlbum = 'https://api.spotify.com/v1/';
+    this.albums = [];
+
   };
 
   ArtistManager.prototype.fetchArtist = function(fullUrl){
@@ -51,20 +21,27 @@ $(function(){
     });
   };
 
-  ArtistManager.prototype.render = function(){
+  // ArtistManager.prototype.fetchAlbums = function(){
+  //   $.ajax({
+  //     url:,
+  //     method:'GET',
+  //     success:function(res){
+  //
+  //     }
+  //   });
+  // };
+
+
+  ArtistManager.prototype.render = function(urlAlbums){
     $('.cont').empty();
       this.artists.forEach(function(a){
+        debugger
         var text = $('<h1>').text(a.name);
-        // var element = $('<p>').html(text);
         var imageUrl = a.images[1].url;
         var divTag = $('<div class="col-xs-4">').append(text);
         var imgTag = $('<img>').attr('src',imageUrl);
-        //divTag.append(imgTag);
-        // debugger
         $(divTag).append(imgTag);
         $('.cont').append(divTag);
-
-        // $('.col-xs-6').append(imgTag);
       });
   };
 
@@ -73,9 +50,9 @@ $(function(){
   $('form').on('submit',function(e){
     e.preventDefault();
     var value = $('#artist').val();
-
     var fullUrl = manager.url+value;
-    // debugger
+    var urlAlbums = manager.urlAlbum+value;
+    debugger
     manager.fetchArtist(fullUrl);
   });
   // debugger
