@@ -21,15 +21,14 @@ $(function(){
     });
   };
 
-  // ArtistManager.prototype.fetchAlbums = function(){
-  //   $.ajax({
-  //     url:,
-  //     method:'GET',
-  //     success:function(res){
-  //
-  //     }
-  //   });
-  // };
+  ArtistManager.prototype.fetchAlbums = function(artistId){
+    debugger
+    var albumUrl = 'https://api.spotify.com/v1/artists/'+artistId+'/albums/';
+    $.get(albumUrl)
+      .done(function(response){
+
+      });
+  };
 
 
   ArtistManager.prototype.render = function(urlAlbums){
@@ -37,25 +36,28 @@ $(function(){
       this.artists.forEach(function(a){
         debugger
         var text = $('<h1>').text(a.name);
-        var imageUrl = a.images[1].url;
         var divTag = $('<div class="col-xs-4">').append(text);
-        var imgTag = $('<img>').attr('src',imageUrl);
+        if (a.images.length > 0) {
+          var imageUrl = a.images[0].url;
+          var imgTag = $('<img>').attr('src',imageUrl);
+        }
+        var albums = a.href+'/albums/';
+        var artistId = a.id;
+        manager.fetchAlbums(artistId);
         $(divTag).append(imgTag);
         $('.cont').append(divTag);
       });
   };
 
   var manager = new ArtistManager();
+  var AlbumManager = new ArtistManager();
 
   $('form').on('submit',function(e){
     e.preventDefault();
     var value = $('#artist').val();
     var fullUrl = manager.url+value;
     var urlAlbums = manager.urlAlbum+value;
-    debugger
+    // debugger
     manager.fetchArtist(fullUrl);
   });
-  // debugger
-
-
 });
